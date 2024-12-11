@@ -57,12 +57,11 @@ foreign key (id_cliente) references clientes(id_cliente);
 alter table facturas add constraint FK_facturas_vendedores
 foreign key (legajo_vendedor) references vendedores(legajo);
 
-alter table ventas add constraint FK_ventas_articulos
-foreign key (codigo) references articulos(codigo);
-
 alter table ventas add constraint FK_ventas_facturas
 foreign key (letra,numero) references facturas(letra,numero);
 
+alter table ventas add constraint FK_ventas_articulos
+foreign key (codigo) references articulos(codigo);
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- SCRIPT PARA INSERTAR REGISTROS EN LA BASE NEGOCIO_INDUMENTARIA 
